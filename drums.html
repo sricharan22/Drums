@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <script>
+        function showCoords(event) {
+            var x = event.clientX;
+            var y = event.clientY;
+            // var coords = "X coords: " + x + ", Y coords: " + y;
+            // document.getElementById("demo").innerHTML = coords;
+            if (x >= 741 && x <= 778 && y >= 476 && y <= 565) {
+                var audio = document.getElementById("center");
+                audio.play();
+            }
+            if (x >= 537 && x <= 700 && y >= 232 && y <= 281) {
+                var audio = document.getElementById("left");
+                audio.play();
+            }
+            if (x >= 641 && x <= 756 && y >= 128 && y <= 175) {
+                var audio = document.getElementById("topleft");
+                audio.play();
+            }
+            if (x >= 782 && x <= 896 && y >= 128 && y <= 175) {
+                var audio = document.getElementById("topright");
+                audio.play();
+            }
+            if (x >= 892 && x <= 1053 && y >= 226 && y <= 278) {
+                var audio = document.getElementById("right");
+                audio.play();
+            }
+            if (x >= 418 && x <= 592 && y >= 142 && y <= 180) {
+                var audio = document.getElementById("leftplate");
+                audio.play();
+            }
+            if (x >= 496 && x <= 658 && y >= 45 && y <= 80) {
+                var audio = document.getElementById("centerleft");
+                audio.play();
+            }
+            if (x >= 872 && x <= 1060 && y >= 80 && y <= 120) {
+                var audio = document.getElementById("centerright");
+                audio.play();
+            }
+            if (x >= 981 && x <= 1160 && y >= 30 && y <= 70) {
+                var audio = document.getElementById("rightplate");
+                audio.play();
+            }
+        }
+    </script>
+</head>
+
+<body>
+    <!-- <p id="demo"></p> -->
+    <center><img src="drums.jpg" onclick="showCoords(event)"></center>
+    <audio id="center" src="Bass-Center.mp3"></audio>
+    <audio id="right" src="Floor-Tom-Right.mp3"></audio>
+    <audio id="left" src="Snare-Drum-Left.mp3"></audio>
+    <audio id="topleft" src="High-Tom-Drum-Top-Left.mp3"></audio>
+    <audio id="topright" src="Medium-Tom-Drum-Top-Right.mp3"></audio>
+    <audio id="leftplate" src="Hi-Hat-Left-Plate.mp3"></audio>
+    <audio id="centerleft" src="Crash-Cymbal-Center-Left.mp3"></audio>
+    <audio id="centerright" src="Ride-Cymbal-Center-Right.mp3"></audio>
+    <audio id="rightplate" src="Crash-Cymbal-Center-Left.mp3"></audio>
+
+</body>
+
+</html>
